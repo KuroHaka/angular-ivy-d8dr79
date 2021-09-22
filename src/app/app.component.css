@@ -1,0 +1,49 @@
+p {
+  font-family: Lato;
+}
+.mat-list .mat-list-item {
+  height: 25px;
+}
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.list {
+  width: 100%;
+  text-align: center;
+}
+.title {
+  border: 2px;
+  border-style: solid;
+  width: 100%;
+  text-align: center;
+}
+
+.cereal {
+  background-color: MediumAquaMarine;
+}
+
+.legume {
+  background-color: GoldenRod;
+}
+
+.meat {
+  background-color: LightSalmon;
+}
+
+.vegetable {
+  background-color: LightGreen;
+}
+
+.dairy {
+  background-color: powderblue;
+}

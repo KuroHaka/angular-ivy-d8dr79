@@ -1,0 +1,69 @@
+<section>
+  <h2>My Shopping List</h2>
+  <p>Here's the list of the products we should buy:</p>
+  <!-- Exercise 1: List the Shopping List products -->
+  <!--  Requirements:
+          1. All the elements of the page should have the same font family
+          2. Table should adapt to the width of the page 
+          3. Row background should have different colors depending on the type of food
+    -->
+  <!--Solució 1-->
+  <!--
+  <table>
+    <thead class="title">
+      <tr>
+        <th>NAME</th>
+        <th>TYPE</th>
+      </tr>
+    </thead>
+    <ng-container *ngFor="let item of SHOPPING_LIST">
+      <tr [attr.class]="item.type">
+        <td>{{ item.name }}</td>
+        <td>{{ item.type }}</td>
+      </tr>
+    </ng-container>
+  </table>
+  -->
+  <!--Solució 2-->
+  <mat-list>
+    <mat-list-item>
+      <th class="title">NAME</th>
+      <th class="title">TYPE</th>
+    </mat-list-item>
+    <mat-list-item *ngFor="let item of SHOPPING_LIST">
+      <td [attr.class]="item.type">{{ item.name }}</td>
+      <td [attr.class]="item.type">{{ item.type }}</td>
+    </mat-list-item>
+  </mat-list>
+</section>
+<!-- Exercise 2: List the Shopping List products -->
+<!--  Requirements 
+      1. Use the snippet below to have a new section on the screen
+      2. Set the list to show only the products from the shopping list that are vegan
+-->
+<section>
+  <h2>Options to a Vegan Diet</h2>
+  <p>
+    Classify foods from our shopping list to keep the vegan ones identified.
+    Here's the list of what we can eat:
+  </p>
+  <ul>
+    <ng-container *ngFor="let item of SHOPPING_LIST">
+      <li *ngIf="item.type != 'meat'">
+        {{ item.name }}
+      </li>
+    </ng-container>
+  </ul>
+</section>
+
+<!-- Exercise 3: Add Barcode of the product on the table
+     Def: Add an extra column to the table with the barcode of the product
+     Req: Use the given function to get the barcode to get it generated to the table
+-->
+
+<!-- Exercise 4: Sort Shopping List
+     Def: We want two buttons (two types of sorting): Alphabetically & by Type
+     Req:
+     1. Place the buttons below the table
+     2. The buttons should sort the shopping list table by each criterion
+-->
